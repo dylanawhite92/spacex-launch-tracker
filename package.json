@@ -4,11 +4,13 @@
   "description": "A React & GraphQL app that displays SpaceX launch missions.",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dylanawhite92/spacex-launch-tracker.git"
+    "url": "https://github.com/dylanawhite92/spacex-launch-tracker.git"
   },
   "author": "Dylan White",
   "license": "ISC",
