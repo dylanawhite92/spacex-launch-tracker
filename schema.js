@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require("axios");
 
 // Bring in required data types from GraphQL
 const {
@@ -39,11 +39,25 @@ const RocketType = new GraphQLObjectType({
 const RootQuery = new GraphQLObjectType({
   name: "RootQueryType",
   fields: {
+    // Get all launches
     launches: {
       type: new GraphQLList(LaunchType),
       resolve(parent, args) {
-          return axios.get('https://api.spacexdata.com/v3/launches/')
-            .then(res => res.data);
+        return axios
+          .get("https://api.spacexdata.com/v3/launches/")
+          .then(res => res.data);
+      }
+    },
+    // Specific launch
+    launch: {
+      type: LaunchType,
+      args: {
+        flight_number: { type: GraphQLInt }
+      },
+      resolve(parent, args) {
+        return axios
+          .get(`https://api.spacexdata.com/v3/launches/${args.flight_number}`)
+          .then(res => res.data);
       }
     }
   }
@@ -51,5 +65,5 @@ const RootQuery = new GraphQLObjectType({
 
 // Export module
 module.exports = new GraphQLSchema({
-    query: RootQuery
+  query: RootQuery
 });
