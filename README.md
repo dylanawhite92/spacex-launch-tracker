@@ -1,5 +1,7 @@
 # SpaceX Launch Tracker
 
+A feed of SpaceX launches and rockets with data provided from the SpaceX API.
+
 ## Technologies Used
 * React.js
 * Node.js/Express.js
