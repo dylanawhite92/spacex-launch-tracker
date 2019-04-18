@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import Moment from "react-moment";
 
 // Pass in props of mapped data
 export default function LaunchItem({
@@ -21,7 +22,7 @@ export default function LaunchItem({
             </span>
           </h4>
           {/* Moment.js will be brought in to format date */}
-          <p>Date: {launch_date_local}</p>
+          <p>Date: <Moment format="YYYY-MM-DD HH:mm">{launch_date_local}</Moment></p>
         </div>
         <div className="col-md-3">
           {/* Placeholder until react-router is in place */}
