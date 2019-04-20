@@ -1,6 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import Moment from "react-moment";
+import { Link } from "react-router-dom";
 
 // Pass in props of mapped data
 export default function LaunchItem({
@@ -25,8 +26,7 @@ export default function LaunchItem({
           <p>Date: <Moment format="YYYY-MM-DD HH:mm">{launch_date_local}</Moment></p>
         </div>
         <div className="col-md-3">
-          {/* Placeholder until react-router is in place */}
-          <button className="btn btn-secondary">Launch Details</button>
+          <Link to={`/launch/${flight_number}`} className="btn btn-secondary">Launch Details</Link>
         </div>
       </div>
     </div>
