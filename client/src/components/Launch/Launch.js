@@ -1,3 +1,4 @@
+import "./Launch.css";
 import React, { Component } from "react";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
@@ -51,13 +52,13 @@ export class Launch extends Component {
                 </h1>
                 <h4 className="mb-3">Launch Details</h4>
                 <ul className="list-group">
-                  <li className="list-group-item">
+                  <li className="list-group-item mb-3">
                     Flight Number: {flight_number}
                   </li>
-                  <li className="list-group-item">
+                  <li className="list-group-item mb-3">
                     Launch Year: {launch_year}
                   </li>
-                  <li className="list-group-item">
+                  <li className="list-group-item mb-3">
                     {/* Ternary operator to handle whether boolean of if launch was successful or not */}
                     Launch Successful:{" "}
                     <span
@@ -73,10 +74,22 @@ export class Launch extends Component {
 
                 <h4 className="my-3">Rocket Details</h4>
                 <ul className="list-group">
-                  <li className="list-group-item">Rocket ID: {rocket_id}</li>
-                  <li className="list-group-item">Rocket Name: {rocket_name}</li>
-                  <li className="list-group-item">Rocket Type: {rocket_type}</li>
+                  <li className="list-group-item mb-3">
+                    Rocket ID: {rocket_id}
+                  </li>
+                  <li className="list-group-item mb-3">
+                    Rocket Name: {rocket_name}
+                  </li>
+                  <li className="list-group-item mb-3">
+                    Rocket Type: {rocket_type}
+                  </li>
                 </ul>
+
+                <hr />
+                
+                <Link to="/" className="btn btn-secondary">
+                  Back
+                </Link>
               </div>
             );
           }}
