@@ -7,7 +7,7 @@ import { Launches, Launch } from "./components/index";
 import Logo from "./images/spaceX-Logo.png";
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql"
+  uri: '/graphql'
 });
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
                 style={{ width: 300, display: "block", margin: "auto" }}
               />
             </Link>
-            
+
             {/* Paths hit serve up specific components */}
             <Route exact path="/" component={Launches} />
             <Route exact path="/launch/:flight_number" component={Launch} />
