@@ -70,6 +70,13 @@ export class Launch extends Component {
                     </span>
                   </li>
                 </ul>
+
+                <h4 className="my-3">Rocket Details</h4>
+                <ul className="list-group">
+                  <li className="list-group-item">Rocket ID: {rocket_id}</li>
+                  <li className="list-group-item">Rocket Name: {rocket_name}</li>
+                  <li className="list-group-item">Rocket Type: {rocket_type}</li>
+                </ul>
               </div>
             );
           }}
